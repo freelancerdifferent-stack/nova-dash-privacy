@@ -27,19 +27,36 @@
   <ul>
     <li><strong>Alamat email &amp; password</strong> — <em>hanya jika kamu memilih membuat akun</em> lewat fitur "Masuk"/"Daftar" yang bersifat opsional (lihat bagian 3).</li>
     <li><strong>Nama pilot (nickname)</strong> — nama yang kamu ketik sendiri secara opsional untuk ditampilkan di papan skor (leaderboard). Ini bukan nama asli/identitas resmi.</li>
-    <li><strong>Kode pemain</strong> — kode acak yang dibuat otomatis oleh aplikasi, tidak terkait identitas pribadi.</li>
+    <li><strong>Kode pemain</strong> — kode unik yang dipakai untuk mengenali kamu di dalam game (dipakai untuk fitur kirim hadiah antar-pemain dan untuk melihat profil di papan skor). Tidak terkait identitas pribadi. Jika kamu membuat akun (bagian 3), kode ini melekat ke akunmu dan tetap sama di semua perangkat tempat kamu login.</li>
     <li><strong>Skor permainan</strong> — skor tertinggi yang kamu capai.</li>
-    <li><strong>Pilihan skin/kustomisasi</strong> — preferensi tampilan roket yang kamu pilih di dalam game.</li>
+    <li><strong>Pilihan skin/kustomisasi</strong> — skin roket yang sudah kamu buka/miliki dan yang sedang kamu pakai.</li>
+    <li><strong>Koin dalam game</strong> — mata uang virtual di dalam game yang kamu kumpulkan dari bermain, dipakai untuk membuka skin atau dikirim sebagai hadiah ke pemain lain. Koin ini tidak punya nilai uang sungguhan dan tidak bisa dibeli/ditukar dengan uang asli.</li>
   </ul>
 
   <h2>2. Bagaimana data disimpan</h2>
   <p>Secara default, semua data di atas disimpan <strong>hanya di perangkatmu sendiri</strong>
-  (penyimpanan lokal browser/aplikasi). Jika fitur papan skor bersama (leaderboard) dan
-  hadiah antar-pemain diaktifkan oleh developer, nama pilot, kode pemain, dan skor dapat
-  disimpan di server database (Firebase Realtime Database) agar bisa ditampilkan ke pemain
-  lain.</p>
+  (penyimpanan lokal browser/aplikasi). Saat fitur papan skor bersama (leaderboard) dan
+  hadiah antar-pemain aktif, nama pilot, kode pemain, skor, skin, dan koin juga disimpan di
+  server database (Firebase Realtime Database) agar bisa disinkronkan antar-perangkat dan
+  ditampilkan ke pemain lain sesuai bagian 3 dan 4.</p>
 
-  <h2>3. Fitur "Masuk" (login) opsional</h2>
+  <h2>3. Papan skor (leaderboard) &amp; profil pemain</h2>
+  <p>Papan skor Nova Dash bersifat publik dan bisa dilihat siapa saja tanpa perlu login.
+  Untuk tiap pemain yang tampil di papan skor, pemain lain bisa membuka profilnya (dengan
+  mengetuk barisnya) dan melihat: nama pilot, kode pemain, skor terbaik, skin yang sedang
+  dipakai, dan jumlah skin yang sudah dimiliki. Data ini sengaja dibuat bisa dilihat pemain
+  lain supaya fitur papan skor dan kirim hadiah antar-pemain bisa berjalan. Kami tidak
+  menampilkan email, password, atau data pribadi lain di papan skor maupun profil ini.</p>
+
+  <h2>4. Fitur hadiah (gift) antar-pemain</h2>
+  <p>Nova Dash punya fitur opsional untuk mengirim koin atau skin eksklusif ke pemain lain
+  memakai kode pemain mereka. Fitur ini hanya bisa dipakai oleh pemain yang sudah membuat
+  akun dan login (lihat bagian 5) — pemain yang belum login tidak bisa mengirim maupun
+  menerima hadiah. Saat hadiah dikirim, data hadiah (jumlah koin atau ID skin, kode pengirim,
+  dan waktu pengiriman) disimpan sementara di Firebase pada kotak masuk milik kode pemain
+  penerima, lalu dihapus otomatis setelah diproses oleh perangkat penerima.</p>
+
+  <h2>5. Fitur "Masuk" (login) opsional</h2>
   <p>Nova Dash punya fitur opsional untuk membuat akun dengan email &amp; password supaya
   progres permainan (skor terbaik, skin yang terbuka, nama pilot) bisa disinkronkan
   antar-perangkat. Login ini memakai layanan autentikasi Firebase — password disimpan
@@ -49,7 +66,7 @@
   (nama asli, nomor telepon, dll) dan tidak dipakai untuk mengirim email apa pun oleh kami.
   Fitur ini sepenuhnya opsional — seluruh permainan tetap bisa dimainkan tanpa membuat akun.</p>
 
-  <h2>4. Iklan</h2>
+  <h2>6. Iklan</h2>
   <p>Nova Dash menampilkan iklan dari <strong>Google AdMob</strong> (iklan interstitial layar
   penuh dan iklan video berhadiah/rewarded). Untuk menyajikan dan mengukur iklan, AdMob dapat
   mengumpulkan data teknis perangkat seperti <strong>advertising ID (GAID)</strong>, alamat IP,
@@ -59,26 +76,27 @@
   Kebijakan AdMob</a>. Kami sendiri tidak memakai SDK analitik pihak ketiga lain di luar
   yang dipakai oleh AdMob untuk menayangkan iklan.</p>
 
-  <h2>5. Berbagi data dengan pihak ketiga</h2>
+  <h2>7. Berbagi data dengan pihak ketiga</h2>
   <p>Kami tidak menjual atau membagikan data pengguna kepada pihak ketiga untuk tujuan
   periklanan. Jika fitur leaderboard, hadiah antar-pemain, atau sinkronisasi progres via
-  email aktif, data terkait (nama pilot, skor, email yang kamu ketik) disimpan di Firebase
-  (layanan Google Cloud) semata-mata agar fitur tersebut bisa berfungsi.</p>
+  email aktif, data terkait (nama pilot, skor, kode pemain, skin, koin, email yang kamu
+  ketik) disimpan di Firebase (layanan Google Cloud) semata-mata agar fitur tersebut bisa
+  berfungsi.</p>
 
-  <h2>6. Keamanan data</h2>
+  <h2>8. Keamanan data</h2>
   <p>Kami berupaya menjaga data yang tersimpan dengan wajar. Kami tidak menyimpan data
-  finansial apa pun. Untuk pengguna yang membuat akun (lihat bagian 3), password tidak
+  finansial apa pun. Untuk pengguna yang membuat akun (lihat bagian 5), password tidak
   disimpan atau dikelola langsung oleh kami — password dikelola secara aman oleh layanan
   Firebase Authentication milik Google.</p>
 
-  <h2>7. Anak-anak</h2>
+  <h2>9. Anak-anak</h2>
   <p>Nova Dash tidak secara khusus ditujukan untuk anak-anak dan tidak dengan sengaja
   mengumpulkan data pribadi dari anak-anak.</p>
 
-  <h2>8. Perubahan kebijakan</h2>
+  <h2>10. Perubahan kebijakan</h2>
   <p>Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini.</p>
 
-  <h2>9. Kontak</h2>
+  <h2>11. Kontak</h2>
   <p>Ada pertanyaan seputar privasi? Hubungi:
   <a href="mailto:romanelgibran24@gmail.com">romanelgibran24@gmail.com</a></p>
 </body>
