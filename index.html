@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Kebijakan Privasi Nova Dash</h1>
-  <p class="updated">Terakhir diperbarui: 14 Agustus 2026</p>
+  <p class="updated">Terakhir diperbarui: 16 Agustus 2026</p>
 
   <p>Nova Dash ("aplikasi", "kami") adalah game arcade sederhana. Kebijakan ini menjelaskan
   data apa saja yang ditangani aplikasi ini dan bagaimana data tersebut digunakan.</p>
@@ -54,7 +54,10 @@
   akun dan login (lihat bagian 5) — pemain yang belum login tidak bisa mengirim maupun
   menerima hadiah. Saat hadiah dikirim, data hadiah (jumlah koin atau ID skin, kode pengirim,
   dan waktu pengiriman) disimpan sementara di Firebase pada kotak masuk milik kode pemain
-  penerima, lalu dihapus otomatis setelah diproses oleh perangkat penerima.</p>
+  penerima. Proses pengiriman dan klaim hadiah divalidasi secara aman melalui fungsi server
+  (Firebase Cloud Functions) — termasuk pembatasan jumlah pengiriman dan batas maksimal
+  koin/skin per hadiah — lalu data hadiah dihapus otomatis setelah selesai diklaim atau
+  kedaluwarsa.</p>
 
   <h2>5. Fitur "Masuk" (login) opsional</h2>
   <p>Nova Dash punya fitur opsional untuk membuat akun dengan email &amp; password supaya
