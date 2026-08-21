@@ -31,16 +31,15 @@
     <li><strong>Skor permainan</strong> — skor tertinggi yang kamu capai.</li>
     <li><strong>Pilihan skin/kustomisasi</strong> — skin, tema, spare part, dan efek jejak roket yang sudah kamu buka/miliki dan yang sedang kamu pakai.</li>
     <li><strong>Koin dalam game</strong> — mata uang virtual di dalam game yang kamu kumpulkan gratis dari bermain, atau beli dengan uang sungguhan lewat Google Play Billing (lihat bagian 5a), dipakai untuk membuka skin/tema/spare part/efek atau dikirim sebagai hadiah ke pemain lain.</li>
-    <li><strong>Data mode Turnamen (opsional)</strong> — jika kamu bergabung ke mode Turnamen, skor turnamen, jumlah nyawa yang dibeli, dan waktu bergabung disimpan agar peringkat &amp; hadiah bisa dihitung. Jika kamu memakai fitur donasi turnamen, jumlah donasi yang kamu berikan disimpan bersama nama pilot &amp; kode pemainmu di daftar donatur yang bisa dilihat pemain lain yang ikut turnamen tersebut (lihat bagian 4a).</li>
+    <li><strong>Data mode Turnamen (opsional)</strong> — jika kamu bergabung ke mode Turnamen (gratis diikuti), skor turnamen, jumlah nyawa tambahan yang dibeli, dan waktu bergabung disimpan agar peringkat &amp; hadiah bisa dihitung (lihat bagian 4a).</li>
   </ul>
 
   <h2>2. Bagaimana data disimpan</h2>
   <p>Secara default, semua data di atas disimpan <strong>hanya di perangkatmu sendiri</strong>
   (penyimpanan lokal browser/aplikasi). Saat fitur papan skor bersama (leaderboard), hadiah
   antar-pemain, atau mode Turnamen aktif, nama pilot, kode pemain, skor, skin, koin, dan data
-  turnamen (termasuk daftar donatur, jika kamu berdonasi) juga disimpan di server database
-  (Firebase Realtime Database) agar bisa disinkronkan antar-perangkat dan ditampilkan ke
-  pemain lain sesuai bagian 3 dan 4.</p>
+  turnamen juga disimpan di server database (Firebase Realtime Database) agar bisa
+  disinkronkan antar-perangkat dan ditampilkan ke pemain lain sesuai bagian 3 dan 4.</p>
 
   <h2>3. Papan skor (leaderboard) &amp; profil pemain</h2>
   <p>Papan skor Nova Dash bersifat publik dan bisa dilihat siapa saja tanpa perlu login.
@@ -62,15 +61,13 @@
   setelah selesai diklaim atau kedaluwarsa.</p>
 
   <h2>4a. Mode Turnamen (opsional)</h2>
-  <p>Nova Dash punya mode Turnamen opsional: pemain membayar koin untuk masuk dan membeli
-  nyawa tambahan, lalu bersaing mengejar skor tertinggi selama periode turnamen berjalan
-  untuk memperebutkan hadiah koin. Skor turnamen, jumlah nyawa yang dibeli, dan waktu
-  bergabungmu disimpan di server (Firebase Realtime Database) agar peringkat dan pembagian
-  hadiah bisa dihitung secara adil untuk semua peserta, dan dihapus otomatis beberapa waktu
-  setelah turnamen berakhir. Mode ini juga punya fitur donasi opsional ke pemain lain dalam
-  turnamen yang sama — jika kamu berdonasi, jumlah donasi disimpan bersama nama pilot &amp;
-  kode pemainmu di daftar donatur yang bisa dilihat oleh sesama peserta turnamen tersebut.
-  Seluruh mode Turnamen ini sepenuhnya opsional.</p>
+  <p>Nova Dash punya mode Turnamen opsional: pemain bergabung <strong>gratis</strong> dan
+  bersaing mengejar skor tertinggi selama periode turnamen berjalan untuk memperebutkan
+  hadiah koin bernilai tetap yang didanai langsung oleh developer (bukan dari koin peserta
+  lain). Pemain juga bisa membeli nyawa tambahan dengan koin untuk terus bermain. Skor
+  turnamen, jumlah nyawa tambahan yang dibeli, dan waktu bergabungmu disimpan di server
+  (Firebase Realtime Database) agar peringkat dan hadiah bisa dihitung, dan dihapus otomatis
+  beberapa waktu setelah turnamen berakhir. Seluruh mode Turnamen ini sepenuhnya opsional.</p>
 
   <h2>5. Fitur "Masuk" (login) opsional</h2>
   <p>Nova Dash punya fitur opsional untuk membuat akun dengan email &amp; password supaya
@@ -108,13 +105,12 @@
 
   <h2>7. Berbagi data dengan pihak ketiga</h2>
   <p>Kami tidak menjual atau membagikan data pengguna kepada pihak ketiga untuk tujuan
-  periklanan. Jika fitur leaderboard, hadiah antar-pemain, mode Turnamen (termasuk daftar
-  donatur), atau sinkronisasi progres via email aktif, data terkait (nama pilot, skor, kode
-  pemain, skin, koin, data turnamen, email yang kamu ketik) disimpan di Firebase (layanan
-  Google Cloud) semata-mata agar fitur tersebut bisa berfungsi. Nama pilot, kode pemain,
-  skor turnamen, dan jumlah donasi di dalam satu turnamen bisa dilihat oleh pemain lain yang
-  mengikuti turnamen yang sama, sebagai bagian normal dari cara kerja fitur kompetisi &amp;
-  donasi ini.</p>
+  periklanan. Jika fitur leaderboard, hadiah antar-pemain, mode Turnamen, atau sinkronisasi
+  progres via email aktif, data terkait (nama pilot, skor, kode pemain, skin, koin, data
+  turnamen, email yang kamu ketik) disimpan di Firebase (layanan Google Cloud) semata-mata
+  agar fitur tersebut bisa berfungsi. Nama pilot, kode pemain, dan skor turnamen bisa dilihat
+  oleh pemain lain yang mengikuti turnamen yang sama, sebagai bagian normal dari cara kerja
+  fitur kompetisi ini.</p>
 
   <h2>8. Keamanan data</h2>
   <p>Kami berupaya menjaga data yang tersimpan dengan wajar. Kami tidak menyimpan data
