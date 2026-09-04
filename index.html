@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Kebijakan Privasi Nova Dash</h1>
-  <p class="updated">Terakhir diperbarui: 23 Agustus 2026</p>
+  <p class="updated">Terakhir diperbarui: 4 September 2026</p>
 
   <p>Nova Dash ("aplikasi", "kami") adalah game arcade sederhana. Kebijakan ini menjelaskan
   data apa saja yang ditangani aplikasi ini dan bagaimana data tersebut digunakan.</p>
@@ -39,10 +39,10 @@
   <h2>2. Bagaimana data disimpan</h2>
   <p>Secara default, semua data di atas disimpan <strong>hanya di perangkatmu sendiri</strong>
   (penyimpanan lokal browser/aplikasi). Jika fitur papan skor bersama (leaderboard), hadiah
-  antar-pemain, atau mode Turnamen diaktifkan oleh developer, nama pilot, avatar, Status/Bio,
-  kode pemain, skor, skin/tema/efek yang dipakai, dan data turnamen dapat disimpan di server
-  database (Firebase Realtime Database) agar bisa ditampilkan ke pemain lain dan hadiah
-  turnamen bisa dihitung serta dibagikan.</p>
+  antar-pemain, fitur sewa item (lihat bagian 5b), atau mode Turnamen diaktifkan oleh
+  developer, nama pilot, avatar, Status/Bio, kode pemain, skor, skin/tema/efek yang dipakai,
+  dan data turnamen dapat disimpan di server database (Firebase Realtime Database) agar bisa
+  ditampilkan ke pemain lain dan hadiah turnamen bisa dihitung serta dibagikan.</p>
 
   <h2>3. Fitur "Masuk" (login) opsional</h2>
   <p>Nova Dash punya fitur opsional untuk membuat akun dengan email &amp; password supaya
@@ -104,6 +104,24 @@
   kode &amp; nama pilot pengirim, jenis item yang dihadiahkan, dan pesan singkat opsional
   (maks. 80 karakter) yang kamu tulis sendiri untuk disertakan — pesan ini akan dibaca
   oleh penerima hadiah.</p>
+
+  <h2>5b. Fitur Sewa Skin (Rent)</h2>
+  <p>Nova Dash punya fitur opsional untuk menyewakan salinan skin/tema/spare part/efek yang
+  kamu punya lebih dari satu ke pemain lain, atau menyewa dari pemain lain. Menyewakan item
+  berarti kamu <strong>membuka akses sementara</strong> ke satu salinan itemmu untuk pemain
+  lain selama durasi tertentu (10 menit sampai 3 hari) — bukan menjual atau memberikan item
+  itu selamanya, dan item itu otomatis kembali menjadi milikmu sepenuhnya setelah masa akses
+  penyewa berakhir. Penyewa membayar pakai koinnya sendiri; sebagian kecil dari harga sewa
+  menjadi biaya platform, sisanya masuk ke koinmu sebagai pemilik. Membuat listing sewa juga
+  dikenakan biaya kecil (dipotong dari koinmu saat listing dibuat) terlepas apakah listing itu
+  akhirnya disewa orang lain atau tidak.</p>
+  <p><strong>Data listing (publik):</strong> selama listing sewamu aktif, data berikut bisa
+  dilihat siapa pun yang membuka menu Sewa Skin di dalam game: kode &amp; nama pilotmu, jenis
+  &amp; nama item, harga sewa, durasi, dan waktu listing dibuat.</p>
+  <p><strong>Riwayat transaksi:</strong> setiap transaksi sewa yang berhasil (baik sebagai
+  penyewa maupun pemilik) dicatat sementara di server sebagai riwayat pribadi — hanya bisa
+  dilihat oleh akunmu sendiri — berisi jenis &amp; nama item, harga, nama lawan transaksi, dan
+  waktu transaksi. Data riwayat ini otomatis terhapus 24 jam setelah dibuat.</p>
 
   <h2>6. Keamanan data</h2>
   <p>Kami berupaya menjaga data yang tersimpan dengan wajar. Kami tidak menyimpan data
